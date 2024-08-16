@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #EADCDC;
+        }
+
+        .panda {
+            position: relative;
+            width: 250px;
+            height: 200px;
+            background-color: #EADCDC;
+            border-radius: 50%;
+        }
+
+        .ear {
+            position: absolute;
+           z-index: -1;
+            width: 80px;
+            height: 80px;
+        
+            background-color: #151109;
+            border-radius: 50%;
+          
+        }
+
+        .ear.left {
+            top: -10px;
+            left: -20px;
+        }
+
+        .ear.right {
+            top: -10px;
+            right: -20px;
+        }
+
+        .eye {
+            position: absolute;
+            width: 60px;
+            height: 50px;
+            background-color: #151109;
+            border-radius: 50%;
+            top: 60px;
+        }
+
+        .eye.left {
+            left: 50px;
+        }
+
+        .eye.right {
+            right: 50px;
+        }
+
+        .eye.white {
+            background-color: #fff;
+            width: 20px;
+            height: 20px;
+            top: 20px;
+            left: 30px;
+        }
+
+        .mouth {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            background-color: #151109;
+            border-radius: 50% / 0 0 50% 50%;
+            top: 115px;
+            left: calc(50% - 20px);
+        }
+    </style>
+</head>
+<body>
+    <div class="panda">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+        <div class="eye left">
+            <div class="eye white"></div>
+        </div>
+        <div class="eye right">
+            <div class="eye white"></div>
+        </div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+    </div>
+</body>
+</html>
