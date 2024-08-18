@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brackets Centered Example</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .brackets {
+            display: inline-block;
+            width: 50px;
+            height: 200px;
+            background-color: black;
+            position: relative;
+        }
+
+        .brackets::before,
+        .brackets::after {
+            content: "";
+            position: absolute;
+            width: 30px; /* Changed to fit better */
+            height: 30px; /* Changed to fit better */
+            background-color: black;
+        }
+
+        .brackets::before {
+            top: 0;
+            right: 100%; /* Place before on the left side */
+            margin-right: 10px; /* Space between the main bracket and the before pseudo-element */
+        }
+
+        .brackets::after {
+            top: 0;
+            left: 100%; /* Place after on the right side */
+            margin-left: 10px; /* Space between the main bracket and the after pseudo-element */
+        }
+
+        .brackets.left::before {
+            width: 50px;
+            height: 200px;
+            right: 100%;
+            margin-right: 10px;
+        }
+
+        .brackets.right::after {
+            width: 50px;
+            height: 200px;
+            left: 100%;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sol tərəfdə bracket -->
+    <div class="brackets left"></div>
+
+    <!-- Sağ tərəfdə bracket -->
+    <div class="brackets right"></div>
+</body>
+</html>
